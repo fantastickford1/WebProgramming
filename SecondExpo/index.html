@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+    	<title>First Expo</title>
+    	<link href="css/mock3Layout.css" rel="stylesheet">
+    	<link href="css/mystylesheet.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="grid">
+			<div class="row">
+				<div class="col-12">
+					Nombre: <input type="text" name="Nombre"><br>
+					Apellido: <input type="text" name="Apellido"><br>
+					Telefono: <input type="text" name="Telefono"><br>
+				</div>
+			</div>
+            <div class="row">
+            	<div class="col-3">
+            		<button type="button" onclick="document.getElementById('demo').innerHTML = Date()">Fecha</button>
+                </div>
+            	<div class="col-3">
+            		<button type="submit">Alert</button>
+                </div>
+            	<div class="col-3">
+            		<button onClick="link()" type="button">Creditos</button>
+                </div>
+            	<div class="col-3">
+            		<button type="button">Preciona</button>
+                </div>
+            </div>
+            <div class="row">
+            	<p id="demo"></p>
+            </div>
+		</div>
+		<script src="js/mijavascrip.js"></script>
+	</body>
+</html>
