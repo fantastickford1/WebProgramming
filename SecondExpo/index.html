@@ -5,14 +5,17 @@
     	<title>First Expo</title>
     	<link href="css/mock3Layout.css" rel="stylesheet">
     	<link href="css/mystylesheet.css" rel="stylesheet">
+        <script type="text/javascript" src="js/mijavascrip.js"></script>
 	</head>
 	<body>
 		<div class="grid">
 			<div class="row">
 				<div class="col-12">
-					Nombre: <input type="text" name="Nombre"><br>
-					Apellido: <input type="text" name="Apellido"><br>
-					Telefono: <input type="text" name="Telefono"><br>
+                    <form name="formulario">
+                        Nombre: <input id="name" type="text" name="Nombre"><br>
+                        Apellido: <input id="lastname" type="text" name="Apellido"><br>
+                        Telefono: <input id="phone" type="text" name="Telefono"><br>
+                    </form>
 				</div>
 			</div>
             <div class="row">
@@ -20,19 +23,27 @@
             		<button type="button" onclick="document.getElementById('demo').innerHTML = Date()">Fecha</button>
                 </div>
             	<div class="col-3">
-            		<button type="submit">Alert</button>
+            		<button type="submit" onclick="validate()">Alert</button>
                 </div>
             	<div class="col-3">
             		<button onClick="link()" type="button">Creditos</button>
                 </div>
             	<div class="col-3">
-            		<button type="button">Preciona</button>
+            		<button onclick="anotherPage()" type="button">Preciona</button>
                 </div>
             </div>
             <div class="row">
-            	<p id="demo"></p>
+                <div class="col-12">
+                    <p id="demo"></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <p id="showN"></p>
+                    <p id="showL"></p>
+                    <p id="showP"></p>
+                </div>
             </div>
 		</div>
-		<script src="js/mijavascrip.js"></script>
 	</body>
 </html>
