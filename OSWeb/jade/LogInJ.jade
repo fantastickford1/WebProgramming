@@ -1,0 +1,26 @@
+doctype html
+html
+    head
+        link(href="css/bootstrap.min.css", rel="stylesheet")
+        link(href="css/LogInStyle.css", rel="stylesheet")
+        script(src="js/jquery-1.12.0.min.js")
+        script(src="js/jquery-ui.min.js")
+        script(src="js/bootstrap.min.js")
+    body
+        .container-fluid
+            #users.row(align="center")
+                .col-md-12
+                    div(align="center")
+                        img#userImage(src="users/fantastickford1.jpg", alt="fantastickford1")
+                        p#username fantastickford1
+            #login.row(align="center")
+                .col-md-12
+                    form(action="LogIn.php", method="post")
+                        input#returnButton(type="button")
+                        input#passwordInput(type="password",placeholder="Enter Password")
+                        input#submitButton(type="submit")
+            div.row
+                #buttons
+                    img
+                    img
+                    img

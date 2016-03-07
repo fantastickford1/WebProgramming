@@ -1,0 +1,67 @@
+body {
+  background: url(../img/background1366x768Cover.jpg);
+}
+
+#users {
+  position: relative;
+  top: 17vw;
+}
+
+#users p {
+  color: white;
+}
+
+.userBlock {
+  display: inline-block;
+  margin-left: 2vw;
+  margin-right: 2vw;
+}
+
+#userImage {
+  width: 6vw;
+  border-radius: 100%;
+  margin-bottom: 1em;
+}
+
+#login {
+  position: relative;
+  top: 11vw;
+}
+
+#submitButton {
+  border-radius: 100%;
+  width: 2vw;
+  height: 2vw;
+  border: none;
+  background: url(../img/arrow-circle.png);
+  background-size: 2vw;
+  background-repeat: no-repeat;
+  text-indent: 3vw;
+  white-space: nowrap;
+  overflow: hidden;
+  opacity: 0.6;
+}
+
+#returnButton {
+  border-radius: 100%;
+  width: 2vw;
+  height: 2vw;
+  border: none;
+  background: url(../img/arrow-circle-left.png);
+  background-size: 2vw;
+  background-repeat: no-repeat;
+  opacity: 0.6;
+}
+
+#passwordInput {
+  border-radius: .4vw;
+  height: 2.6vw;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  padding-left: 1em;
+}
+
+#passwordInput::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
