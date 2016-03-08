@@ -19,7 +19,6 @@
     <script src="js/jquery-1.12.0.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/logINFuntions.js"></script>
   </head>
   <body>
     <div class="container-fluid">
@@ -37,6 +36,10 @@
           ?>
         </div>
       </div>
+      <div id="theUser" align="center" class="row">
+        <div id="selectedUser" class="col-md-12">
+        </div>
+      </div>
       <div id="login" align="center" class="row">
         <div class="col-md-12">
           <form action="LogIn.php" method="post">
@@ -50,5 +53,6 @@
         <div id="buttons"><img><img><img></div>
       </div>
     </div>
+    <script src="js/logINFuntions.js"></script>
   </body>
 </html>

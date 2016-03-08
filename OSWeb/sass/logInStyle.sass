@@ -3,10 +3,15 @@ $button-size : 2vw
 body
   background: url(../img/background1366x768Cover.jpg)
 
-//one user
 #users
   position: relative
-  top: 17vw
+  top: 22vw
+  p
+    color: white
+
+#theUser
+  position: relative
+  top: 22vw
   p
     color: white
 
@@ -56,3 +61,18 @@ body
   padding-left: 1em
   &::-webkit-input-placeholder
     color: rgba(255, 255, 255, 0.75)
+
+//animation class and helpers
+.userCool
+  display: inline-block
+  margin-left: 2vw
+  margin-right: 2vw
+  position: relative
+
+.move
+  animation: movePrincipalUser 3s forwards ease-in-out 3s
+
+
+@keyframe movePrincipalUser
+  to
+    transform: scale(30)
