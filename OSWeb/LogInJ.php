@@ -37,7 +37,7 @@
       </div>
       <div id="login" align="center" class="row">
         <div class="col-md-12">
-          <form action="Verify.php" method="post">
+          <form action="CheckIn.php" method="post">
             <input id="returnButton" type="button">
             <input id="userInput" name="user" type="text">
             <input id="passwordInput" name="password" type="password" placeholder="Enter Password">
