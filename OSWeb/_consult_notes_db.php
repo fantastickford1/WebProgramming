@@ -11,7 +11,7 @@
         $count = 0;
         if($result -> num_rows > 0){
             while ($row = $result->fetch_assoc()) {
-                echo "<li id='nota0".$count."' type='none' onclick='ver_notas(id)'>".$row["Note"]."</li>";
+                echo "<li id='nota0".$count."' type='none' onclick='watchNotes(id)'>".$row["Note"]."</li>";
                 $count++;
             }
             $conn ->close();
