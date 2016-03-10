@@ -1,3 +1,7 @@
+<?php
+  session_start();
+  if (isset($_SESSION['username'])) {
+ ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -11,6 +15,7 @@
         <script src="js/jquery-ui.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/animation.js"></script>
+        <script src="js/ajaxscrip.js"></script>
     </head>
     <body>
         <nav id="topThing">
@@ -131,3 +136,9 @@
 
     </body>
 </html>
+
+<?php
+}else {
+  header("Location:LogInJ.php");
+}
+ ?>

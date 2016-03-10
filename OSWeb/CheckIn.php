@@ -11,7 +11,7 @@ if( isset($_POST['submit'])){
         $row = $result ->fetch_assoc();
         $_SESSION['username'] = $row['User'];
         $conn ->close();
-        header("Location:OSXElCapitan.html");
+        header("Location:OSXElCapitan.php");
     }else {
         $conn ->close();
         header("Location:LogInJ.php");
