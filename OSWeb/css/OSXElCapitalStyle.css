@@ -250,7 +250,7 @@ a#equal{
 /* Notes */
 
 #notesContainer {
-    display: none;
+    display: inline;
     position: absolute;
     top: 40px;
     left: 220px;
@@ -439,3 +439,121 @@ a#equal{
     background-color: #37c940;
 }
 
+/*Users and Groups*/
+
+#UGContainer {
+    display: inline;
+    position: absolute;
+    top: 40px;
+    left: 220px;
+}
+
+#user_groups {
+    width: 50vw;
+    height: 65vh;
+    background-color: #ebebe9;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+#u_gBar {
+    background-color: #e3e1e4;
+    width: 50vw;
+    height: 5.3vh;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border: 1px solid rgba(184,182,183,0.1);
+    border-width: 0px 0px 3px;
+}
+
+#sideBar {
+    position: relative;
+    top: 4vh;
+    left: 1.5vw;
+    width: 12vw;
+    height: 45vh;
+    background-color: #fefefc;
+    float:left;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-bottom-width: 0px; 
+    border-left-width: 0px; 
+    border-top-width: 0px;
+    overflow-y: auto;
+    z-index: 0;
+}
+
+#config {
+    position: relative;
+    left: 2.3vw;
+    top: 5vh;
+    float:left;
+    background-color: #e3e3e3;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    border-radius: 1%;
+    width: 34vw;
+    height: 44.3vh;
+}
+
+#toolbar {
+    position: absolute;
+    top: 51.3vh;
+    left: 1.5vw;
+    background-color: #f8f8f8;
+    border: 1px solid rgba(0,0,0,0.1);
+    width: 11.89vw;
+    height: 3vh;
+    z-index: 3;
+}
+
+#add{
+    float:left;
+    border: 1px solid rgba(0,0,0,0.1);
+    height: 2.8vh;
+    width: 1.7vw;
+    background: url(../img/Plus.png);
+    background-size: 1.3vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+#delete{
+    float:left;
+    border: 1px solid rgba(0,0,0,0.1);
+    height: 2.8vh;
+    width: 1.7vw;
+    background: url(../img/Minus.png);
+    background-size: 1.3vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+
+.Users{
+    color: #8e959a;
+    margin-left: 0.6vw;
+}
+
+.theUsers{
+    width: 11.4vw;
+    height: 7vh;
+}
+
+.theUsers p{
+    float: left;
+    margin-left: 0.6vw;
+    margin-bottom: 0;
+}
+
+.userName{
+    color: black;
+}
+
+#adminImage {
+    width: 2.4vw;
+    border-radius: 100%;
+    float:left;
+}
