@@ -1,0 +1,177 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,300,700)
+
+// Reset
+*
+  margin: 0
+  padding: 0
+
+:root, body
+  font-size: 20px
+
+body
+  font-family: 'Oswald', Helvetica
+  width: 100%
+  height: 100vh
+  overflow: hidden
+
+// Layout
+.pantalla-completa
+  width: 100%
+  height: 100vh
+  overflow: hidden
+
+.centrado
+  display: flex
+  justify-content: center
+  align-items: center
+
+$size: 300px
+$sm-size: 60px
+
+$duration: 3s
+$delay: 2s
+
+$shadow: 0 0 0 5px
+$dia: whitesmoke
+$noche: #353841
+
+// Presentacion
+.presentacion
+  background: $dia
+  animation: fondo $duration forwards ease-in-out $delay
+  flex-direction: column
+
+  position: absolute
+  top: 0
+  left: 0
+  opacity: 1
+
+  transition: all $duration ease-in-out
+
+  .texto
+    font-size: 2em
+    font-weight: 700
+
+    &.uno
+      color: $noche
+
+    &.dos
+      color: $dia
+
+  .boton
+    // Reset de la etiqueta
+    apperance: none
+    background: transparent
+    outline: none
+    border: 0
+    cursor: pointer
+    font-family: inherit
+    font-size: inherit
+
+    // Mis estilos
+    margin-top: 2em
+    padding: 0.5em 1em
+    box-shadow: 0 0 0 2px #EBE275
+    color: #EBE275
+    font-weight: 300
+
+    opacity: 0
+    pointer-events: none
+
+    transition: all 500ms ease-in-out
+    animation: aparecer $duration forwards ease-in-out $delay
+
+    &:hover
+      background: #EBE275
+      color: $noche
+
+  .paisaje
+    width:  $size
+    height: $size
+
+    margin: 3em 0
+
+    background:
+      image: url(media/mountains.svg)
+      size: cover
+      repeat: no-repeat
+      position: 0
+
+    border-radius: 50%
+    box-shadow: $shadow $noche
+    animation: paisaje $duration forwards ease-in-out $delay
+
+    .rotacion
+      width: 100%
+      height: 100%
+
+      position: relative
+      animation: rotacion $duration forwards ease-in-out $delay
+
+      .sol,
+      .luna
+        width: $sm-size
+        height: $sm-size
+        position: absolute
+
+      .sol
+        background:
+          image: url(media/sol.svg)
+          repeat: no-repeat
+
+        top:  ($sm-size / 2) * -1
+        left: ($size / 2) - ($sm-size / 2)
+
+      .luna
+        background:
+          image: url(media/luna.svg)
+          repeat: no-repeat
+
+        top:  $size - ($sm-size / 2)
+        left: ($size / 2) - ($sm-size / 2)
+
+// Mapa
+.mapa
+  position: absolute
+  overflow: hidden
+
+  transform: scale(0.3)
+  opacity: 0
+
+  transition: all $duration ease-in-out
+
+.g-map, .canvas
+  position: absolute
+
+.g-map
+  width: 100%
+  height: 100vh
+
+// Apariciones
+.is-hidden
+  opacity: 0
+  pointer-events: none
+  transform: translateX(100%) scale(0.2)
+
+.is-visible
+  opacity: 1
+  transform: scale(1)
+
+// Animaciones
+@keyframes paisaje
+  to
+    background-position: $size * -1
+    box-shadow: $shadow $dia
+
+@keyframes fondo
+  to
+    background: $noche
+
+@keyframes rotacion
+  to
+    transform: rotateZ(180deg)
+
+@keyframes aparecer
+  to
+    opacity: 1
+    pointer-events: all

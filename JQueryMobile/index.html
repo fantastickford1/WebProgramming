@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="jquery.mobile-1.4.5.min.css" rel="stylesheet">
+        <script src="jquery-1.12.1.min.js"></script>
+        <script src="jquery.mobile-1.4.5.min.js"></script>
+        <script src="send.js"></script>
+    </head>
+    <body>
+        <div data-role="page" id="pagina1">
+            
+            <div data-role="panel" id="myPanel"> 
+                <img src="logo-upch.png">
+                <p>Carlos Alejandro Zenteno Robles</p>
+                <p>IDS</p>
+                <p>Programacion Web</p>
+            </div> 
+            
+            <div data-role="header">
+                <h1>Welcome To My Homepage</h1>
+            </div>
+
+            <div data-role="main" class="ui-content">
+                <ul data-role="listview" data-inset="true">
+                    <li><a href="#pagina3">Tema a elegir</a></li>
+                    <li><a href="#myPanel">Creditos</a></li>
+                    <li><a href="#pagina2">Formulario</a></li>
+                </ul>
+            </div>
+
+            <div data-role="footer">
+                <h1>Web Programing :3</h1>
+            </div>
+
+        </div>
+        
+        <div data-role="page" id="pagina2">
+        
+            <div data-role="header">
+                <h1>Formulario</h1>
+            </div>
+            
+            <div data-role="main" class="ui-content">
+                <form>
+                    <input type="text" id="nombre" placeholder="Nombre">
+                    <input type="text" id="apellido" placeholder="Apellido">
+                    <input type="text" id="edad" placeholder="Edad">
+                    <input type="text" id="ocupacion" placeholder="Ocupacion">
+                    <label for="genero">Genero</label>
+                    <select name="genero" id="genero">
+                        <option value="Masculino">Masculino</option>
+                        <option value="Femenino">Femenino</option>
+                    </select>
+                    <input type="reset" value="Limpiar datos">
+                    <a class="ui-btn" href="#datos" id="send">Send</a>
+                    <a class="ui-btn" href="#pagina1">Regresar</a>
+                </form>
+            </div>
+        
+        </div>
+        
+        
+        <div data-role="page" data-dialog="true" id="datos" >
+            <div data-role="header">
+                <h1>Datos</h1>
+            </div>
+            <div data-role="main" class="ui-content">
+                <p id="contenido">Nombre : </p>
+                <p id="lastname">Apellido: </p>
+                <p id="age">Edad : </p>
+                <p id="op">Ocupacion : </p>
+                <p id="gender">Genero : </p>
+            </div>
+        </div>
+        
+        <div data-role="page" id="pagina3">
+        
+            <div data-role="header">
+                <h1>Guild Wars 2</h1>
+            </div>
+            
+            <div data-role="main" class="ui-content">
+                <img src="GW2_Logo_Master_Horizontal_72pi_032011.png" width="800vw">
+                <p>Guild Wars 2 is a massively multiplayer online role-playing game developed by ArenaNet and published by NCSOFT. Set in the fantasy world of Tyria, the game follows the re-emergence of Destiny's Edge, a disbanded guild dedicated to fighting the Elder Dragons, a Lovecraftian species that has seized control of Tyria in the time since the original Guild Wars. The game takes place in a persistent world with a story that progresses in instanced environments.[2]
+
+Guild Wars 2 claims to be unique in the genre[3] by featuring a storyline that is responsive to player actions,[4] something which is common in single player role-playing games but rarely seen in multiplayer ones. A dynamic event system replaces traditional questing,[5] utilising the ripple effect to allow players to approach quests in different ways as part of a persistent world. Also of note is the combat system, which aims to be more dynamic than its predecessor by promoting synergy between professions and using the environment as a weapon,[6][7] as well as reducing the complexity of the Magic-style skill system of the original game.</p>
+                <a class="ui-btn" href="#pagina1">Regresar</a>
+            </div>
+        
+        </div>
+        
+    </body>
+</html>

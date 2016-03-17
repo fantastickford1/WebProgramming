@@ -1,0 +1,52 @@
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="Degradado_sin_nombre_62" x1="200" y1="300" x2="200" y2="-59.0262" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#d0f6da"/>
+      <stop offset="1" stop-color="#00bfa5"/>
+    </linearGradient>
+    <linearGradient id="Degradado_sin_nombre_57" x1="600" y1="298.6667" x2="600" y2="-60.3595" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#866194"/>
+      <stop offset="1" stop-color="#504c62"/>
+    </linearGradient>
+  </defs>
+  <title>Mountains</title>
+  <path d="M0,0V150.8771A78,78,0,1,1,0,256.79V400H400V0H0Z" style="fill:url(#Degradado_sin_nombre_62)"/>
+  <path d="M57.25,281.8333A78,78,0,1,0,0,150.8771V256.79A77.7767,77.7767,0,0,0,57.25,281.8333Z" style="fill:#dcedc8"/>
+  <circle cx="57.25" cy="207.5" r="55" style="fill:#fff9c4"/>
+  <polygon points="0 288.009 171.667 154.333 399 312.368 400 400 0 400 0 288.009" style="fill:#6bbfbd"/>
+  <polygon points="800 400 400 400 400 245.667 400 0 800 0 800 400" style="fill:url(#Degradado_sin_nombre_57)"/>
+  <polygon points="114 400 400 400 400 163.667 114 400" style="fill:#4e84a9"/>
+  <polygon points="400 163.667 339 231.5 332.333 263.667 317 288.333 322.333 256.333 304.333 258.333 289.667 277.167 263.667 307 231.667 320 226.287 333.12 204.899 324.886 400 163.667" style="fill:#5fa0c4"/>
+  <polygon points="400 400 204.899 324.886 195.667 307.667 47 236.333 17 209.667 0 169.667 0 400 400 400" style="fill:#49486e"/>
+  <polygon points="195.667 307.523 174.285 297.407 47 236.333 145.667 292.333 188 314.333 179 327.667 179 346 163 365.667 192.333 349 190.73 336.595 204.899 324.886 195.667 307.523" style="fill:#7986cb"/>
+  <rect x="288.0498" y="65.8333" width="48.4005" height="12.3333" rx="6.1667" ry="6.1667" style="fill:#fafafa"/>
+  <rect x="297.0498" y="59.6667" width="48.4005" height="12.3333" rx="6.1667" ry="6.1667" style="fill:#eee"/>
+  <rect x="61.3993" y="73.5417" width="72.6007" height="18.5" rx="9.25" ry="9.25" style="fill:#fafafa"/>
+  <rect x="74.8993" y="64.2917" width="72.6007" height="18.5" rx="9.25" ry="9.25" style="fill:#eceff1"/>
+  <rect x="204.8993" y="169.9918" width="94.3133" height="24.0328" rx="9.25" ry="9.25" style="fill:#fafafa"/>
+  <rect x="222.4367" y="157.9754" width="94.3133" height="24.0328" rx="9.25" ry="9.25" style="fill:#cfd8dc"/>
+  <polygon points="686 400 400 400 400 163.667 686 400" style="fill:#4b5f6e"/>
+  <polygon points="399.899 163.667 447 228.5 470 236.333 478 256 493 251.917 510.5 271.5 490.5 277.167 530.5 289.5 550 308 575.5 318 595 324.876 399.899 163.667" style="fill:#9ea8a5"/>
+  <polygon points="506 400 568.333 277.167 616 284.833 654.5 200 740.667 163.667 800 43 800 400 506 400" style="fill:#3d3a54"/>
+  <polygon points="764.905 114.202 757.583 154.417 768.292 173.375 764.646 190.688 768.323 212.344 755.995 189.172 757.333 170 743 170 722.281 171.419 740.667 163.667 764.905 114.202" style="fill:#766f87"/>
+  <polygon points="622 271 622 287 630.333 295.667 626.167 314.333 633.5 324.876 621 313.667 621 302 613 292.333 608.994 283.706 616 284.833 622 271" style="fill:#766f87"/>
+  <polygon points="694.57 183.104 660 205.333 634.408 244.271 654.5 200 694.57 183.104" style="fill:#766f87"/>
+  <circle cx="533" cy="191.5246" r="2.5" style="fill:#ded0ff"/>
+  <circle cx="595" cy="230.5833" r="2" style="fill:#ded0ff"/>
+  <circle cx="509" cy="114.2017" r="3" style="fill:#ded0ff"/>
+  <circle cx="564.3698" cy="28.3203" r="2" style="fill:#ded0ff"/>
+  <circle cx="621.2468" cy="138" r="2" style="fill:#a096b8"/>
+  <circle cx="585" cy="157.9754" r="4" style="fill:#fff"/>
+  <circle cx="600" cy="82.7917" r="3.5" style="fill:#ede6ff"/>
+  <circle cx="512" cy="59.6667" r="2" transform="matrix(0.1445, -0.9895, 0.9895, 0.1445, 378.9863, 557.6741)" style="fill:#a096b8"/>
+  <circle cx="547.6667" cy="248.3936" r="2" style="fill:#a096b8"/>
+  <circle cx="460.6406" cy="158.4167" r="3" style="fill:#eae0ff"/>
+  <circle cx="677" cy="164.4167" r="2" style="fill:#ded0ff"/>
+  <circle cx="766.6667" cy="27.0664" r="2.5" style="fill:#ede6ff"/>
+  <circle cx="656.8594" cy="19.8164" r="3.5" style="fill:#eae0ff"/>
+  <circle cx="434.4844" cy="25.0664" r="2" style="fill:#a096b8"/>
+  <circle cx="429.2344" cy="108.9517" r="2" style="fill:#a096b8"/>
+  <circle cx="708.2297" cy="87.6628" r="41.2822" transform="translate(123.2546 496.4148) rotate(-42)" style="opacity:0.2"/>
+  <circle cx="708.397" cy="87.8486" r="49.9319" transform="translate(123.1733 496.5745) rotate(-42)" style="fill:#fff;opacity:0.4"/>
+  <path d="M680.8709,56.897a41.1068,41.1068,0,0,1,10.9752-7.0916,41.17,41.17,0,0,0,52.321,58.1083A41.17,41.17,0,1,1,680.8709,56.897Z" style="fill:#fff"/>
+</svg>

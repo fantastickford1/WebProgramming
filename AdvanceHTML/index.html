@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Practica HTML Avanzado</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+    <link rel="stylesheet" href="app.css">
+    <script src="mapscript.js"></script>
+  </head>
+  <body>
+    <div id="mapa" class="mapa pantalla-completa">
+    </div>
+    <div id="presentacion" class="presentacion pantalla-completa centrado">
+      <div class="texto uno">El día se está terminando ...</div>
+      <div class="paisaje">
+        <div class="rotacion">
+          <div class="sol"></div>
+          <div class="luna"></div>
+        </div>
+      </div>
+      <div class="texto dos">... y es tiempo de regresar a casa.</div>
+      <button id="mostrar-mapa" type="button" class="boton">¿Cómo regresar?</button>
+    </div>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyvI8Rqx3RbB0eKM5yUm2B0JoQQNBXOz8&amp;callback=initMap">     </script>
+    <script src="app.js"></script>
+  </body>
+</html>
