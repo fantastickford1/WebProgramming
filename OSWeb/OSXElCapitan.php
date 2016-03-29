@@ -1,6 +1,6 @@
 <?php
   session_start();
-  if (isset($_SESSION['username'])) {
+  if (isset($_SESSION['username']) && $_SESSION['type'] == "User") {
  ?>
 <!DOCTYPE html>
 <html>
@@ -101,9 +101,9 @@
                     <div style="float: left; height: 10px; width: 10px;"></div>
                     <div class="NoteOtherButtons"></div>
                     <div class="NoteOtherButtons"></div>
-                    <div class="NoteOtherButtons" style="padding-left: 15px;" onclick="eliminar_nota()"><img src="img/ios7-trash-outline.png" alt="circleCheck" height="15.39px"></div>
-                    <div id="NoteNewButton"><b><a>New note</a></b></div>
-                    <div class="NoteOtherButtons" id="newNote" style="padding-left: 9px;" onclick="nueva_nota()"><img src="img/circle-check-128.png" alt="circleCheck" height="24.39px"></div>
+                    <div class="NoteOtherButtons" style="padding-left: 15px;" onclick="deleteNote()"><img src="img/ios7-trash-outline.png" alt="circleCheck" height="15.39px"></div>
+                    <div id="NoteNewButton"><b><a onclick="newNote()">New note</a></b></div>
+                    <div class="NoteOtherButtons" id="newNote" style="padding-left: 9px;"><img src="img/circle-check-128.png" alt="circleCheck" height="24.39px"></div>
                 </div>
                 <div id="notesSideBar">
                     <ul id="notesViewer">

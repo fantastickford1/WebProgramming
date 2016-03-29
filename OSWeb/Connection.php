@@ -1,7 +1,6 @@
 <?php
 
 $conn = new mysqli("localhost","root","root","osusers");
-$result;
 
 // Check connection
 if ($conn -> connect_error)

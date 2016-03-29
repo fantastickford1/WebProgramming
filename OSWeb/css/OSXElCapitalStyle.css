@@ -37,7 +37,7 @@
 }
 
 #AppleLogoContainer{
-    padding-top: 2px; 
+    padding-top: 2px;
     padding-bottom: 0px;
 }
 
@@ -149,8 +149,8 @@
     left: 515px;
     top: 100px;
     border-radius: 4px;
-    font-family: "Roboto", Arial, sans-serif; 
-    font-weight: 100;    
+    font-family: "Roboto", Arial, sans-serif;
+    font-weight: 100;
 }
 
 #calculator{
@@ -162,7 +162,7 @@
     overflow: hidden;
     padding: 0px;
     background: rgba(0,0,0,0.4);
-    
+
     &:before {
         background: inherit;
         filter: blur(10px) saturate(2);
@@ -177,9 +177,9 @@
     width: 224px;
     overflow:hidden;
     -webkit-filter: blur(10px);
-   -moz-filter: blur(10px); 
-     -o-filter: blur(10px); 
-    -ms-filter: blur(10px); 
+   -moz-filter: blur(10px);
+     -o-filter: blur(10px);
+    -ms-filter: blur(10px);
         filter: blur(10px);
 }*/
 
@@ -250,7 +250,7 @@ a#equal{
 /* Notes */
 
 #notesContainer {
-    display: inline;
+    display: none;
     position: absolute;
     top: 40px;
     left: 220px;
@@ -338,8 +338,8 @@ a#equal{
     background-color: #fefefc;
     float:left;
     border: 1px solid rgba(0,0,0,0.1);
-    border-bottom-width: 0px; 
-    border-left-width: 0px; 
+    border-bottom-width: 0px;
+    border-left-width: 0px;
     border-top-width: 0px;
 }
 
@@ -393,7 +393,7 @@ a#equal{
 #menuDrop li{
     position: relative;
     list-style-type: none;
-    position:relative; 
+    position:relative;
 }
 
 #menuDrop a{
@@ -475,8 +475,8 @@ a#equal{
     background-color: #fefefc;
     float:left;
     border: 1px solid rgba(0,0,0,0.1);
-    border-bottom-width: 0px; 
-    border-left-width: 0px; 
+    border-bottom-width: 0px;
+    border-left-width: 0px;
     border-top-width: 0px;
     overflow-y: auto;
     z-index: 0;
@@ -556,4 +556,22 @@ a#equal{
     width: 2.4vw;
     border-radius: 100%;
     float:left;
+}
+
+.allTheUsers{
+  float: left;
+  margin-bottom: 2vh;
+}
+
+.allTheUsers:hover{
+  transition: background-color 0.5s ease;
+  background-color: #116cd6;
+}
+
+.allTheUsers:active{
+  background-color: #116cd6;
+}
+
+#formulario{
+  
 }

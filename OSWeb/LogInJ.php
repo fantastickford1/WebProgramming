@@ -2,6 +2,12 @@
 
   session_start();
   include 'Connection.php';
+  if(isset($_SESSION['username'])){
+    if($_SESSION['type'] == "User")
+      header("Location:OSXElCapitan.php");
+    else if($_SESSION['type'] == "Super")
+      header("Location:OSXElCapitanAdmin.php");
+  }
   $sql = "SELECT User,image FROM `usernames`";
   $result = $conn -> query($sql);
 ?>

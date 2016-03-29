@@ -15,7 +15,7 @@ $(function () {
 
 });
 
-var mesage;
+var mesage = "";
 
 function watchNotes(id) {
   mesage = document.getElementById(id).innerHTML;
@@ -24,11 +24,11 @@ function watchNotes(id) {
 
 function newNote() {
   var text = $("#textArea").val();
-  if (mesage != " " && mensaje != "") {
+  if (text != " " && text != "") {
     $.ajax({
       type: "POST",
-      data: {note: text, current: mesage },
-      url: "_add_notes_db.php"
+      data: {action: "create",note: text, current: mesage },
+      url: "Actions.php"
     });
     $("#notesViewer").load("_consult_notes_db.php");
     $("#textArea").val("");
@@ -39,8 +39,8 @@ function newNote() {
 function deleteNote() {
   $.ajax({
     type: "POST",
-    data: {current: mesage},
-    url:
+    data: {action: "delete",current: mesage},
+    url: "Actions.php"
   });
   $("#notesViewer").load("_consult_notes_db.php");
   $("#textArea").val("");

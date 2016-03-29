@@ -1,3 +1,7 @@
+<?php
+session_start();
+if (isset($_SESSION['username']) && $_SESSION['type'] == "Super") {
+?>
 <html>
     <head>
         <meta charset="UTF-8">
@@ -10,7 +14,7 @@
         <script src="js/jquery-ui.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/animation.js"></script>
-        <script src="js/ajaxscrip.js"></script>
+        <script src="js/adminAJAX.js"></script>
     </head>
     <body>
         <nav id="topThing">
@@ -66,20 +70,17 @@
                 <div id="sideBar">
                     <div class="Users">
                         <p>Current User</p>
-                        <div class="theUsers">
-                            <img id="adminImage" src="users/fantastickford1.JPG">
-                            <p class="userName"><strong>fantastickford1</strong></p>
-                            <p>Admin</p>
+                        <div id="AdminUser" class="theUsers">
                         </div>
                     </div>
                     <div class="Users">
                         <p>Other Users</p>
-                        <div class="theUsers">
-                            <div>
-                                <img id="adminImage" src="users/fantastickford1.JPG">
-                                <p class="userName"><strong>fantastickford1</strong></p>
-                                <p>Admin</p>
-                            </div>
+                        <div id="OtherUsers" class="theUsers">
+<!--                            <div>-->
+<!--                                <img id="adminImage" src="users/fantastickford1.JPG">-->
+<!--                                <p class="userName"><strong>fantastickford1</strong></p>-->
+<!--                                <p>Admin</p>-->
+<!--                            </div>-->
                         </div>
                     </div>
                 </div>
@@ -87,8 +88,21 @@
                         <div id="add"></div>
                         <div id="delete"></div>
                     </div>
-                <div id="config">
-                
+                <div id="config" align="center">
+                    <form id="formulario" action="AddUsers.php" method="post">
+                        <label>Usuario</label><br>
+                        <input type="text" name="username" required><br>
+                        <label>Tipo</label><br>
+                        <input type="text" name="type" required><br>
+                        <label>Contraseña</label><br>
+                        <input type="text" name="password" required><br>
+                        <input type="submit" value="Registrar">
+                    </form>
+                    <form id="deleteForm" action="DeleteUser.php" method="post">
+                        <label>Usuario a borrar</label><br>
+                        <input type="text" name="user" required><br>
+                        <input type="submit" value="Borrar">
+                    </form>
                 </div>
                 </div>
             </div>
@@ -112,3 +126,8 @@
 
     </body>
 </html>
+<?php
+}else {
+    header("Location:LogInJ.php");
+}
+?>
