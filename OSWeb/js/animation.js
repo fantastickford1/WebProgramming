@@ -2,7 +2,14 @@ $(function(){
     $("#finder").on("click",function() {
        $("#finder").addClass("animated bounce").one("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend", function() {
           $(this).removeClass("animated bounce");
+          $("#finderM").css("display","inline");
        });
+    });
+
+    $("#finderM").draggable();
+
+    $("#closeF").on("click", function() {
+        $("#finderM").css("display","none");
     });
 });
 
@@ -26,7 +33,15 @@ $(function(){
     $("#mail").on("click",function() {
         $("#mail").addClass("animated bounce").one("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend", function() {
             $(this).removeClass("animated bounce");
+            $("#pages").css("display","inline");
         });
+    });
+
+    $("#pages").draggable();
+
+    $("#closeP").on("click", function() {
+        $("#itextArea").val("");
+        $("#pages").css("display","none");
     });
 });
 
@@ -210,4 +225,105 @@ $(document).ready(function(){
     $("#closeB").click(function() {
         $("#about").css("display","none");
     });
+});
+
+
+// Finder
+
+var fileN;
+function filename(id) {
+  fileN = document.getElementById(id).innerHTML;
+  fileN = fileN.split(">");
+  fileN = fileN[1];
+}
+
+$(function () {
+
+  $("#deleteFile").on("click",function () {
+    if (fileN != undefined) {
+      $.post(
+        "filesManager.php",
+        {
+          action: "delete", data: fileN, toWrite: "none"
+        },
+        function () {
+          $(".list2").load("AllFiles.php");
+        }
+      );
+    }
+  });
+
+  $("#openFile").on("click",function (){
+    if (fileN != undefined) {
+      $.post(
+        "filesManager.php",
+        {
+          action: "edit", data: fileN, toWrite: "none"
+        },
+        function (respont) {
+          $("#itextArea").val(respont);
+          $("#pages").css("display","inline");
+        }
+      );
+    }
+  });
+
+  function createFile() {
+    FileNameInput = $("#fileNameInput").val();
+    FileNameInput = FileNameInput + ".txt";
+    if (FileNameInput != "" && FileNameInput != " ") {
+      $.post(
+        "filesManager.php",
+        {
+          action: "create", data: FileNameInput, toWrite: "none"
+        },
+        function () {
+          $(".list2").load("AllFiles.php");
+        }
+      );
+    }
+    dialog.dialog( "close" );
+  }
+
+  var dialog,form;
+
+  dialog = $("#dialog-form").dialog({
+    autoOpen: false,
+    height: 150,
+    width: 400,
+    modal: true,
+    buttons: {
+      "Create": createFile,
+      Cancel: function() {
+        dialog.dialog("close");
+      }
+    },
+    close: function() {
+      form[ 0 ].reset();
+    }
+  });
+
+  form = dialog.find("form").on("submit", function( event ) {
+    event.preventDefault();
+    createFile();
+  });
+
+  $("#newFile").button().on("click", function() {
+    dialog.dialog("open");
+  });
+
+  $("#newFileP").button().on("click", function() {
+    dialog.dialog("open");
+  });
+
+  $("#ediFile").on("click", function () {
+    var text = $("#itextArea").val();
+    $.post(
+      "filesManager.php",
+      {
+        action: "editPages", data: fileN, toWrite: text
+      }
+    );
+  })
+
 });

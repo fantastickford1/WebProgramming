@@ -1,6 +1,7 @@
 <?php
   session_start();
   if (isset($_SESSION['username']) && $_SESSION['type'] == "User") {
+    $user = $_SESSION['username'];
  ?>
 <!DOCTYPE html>
 <html>
@@ -8,6 +9,7 @@
         <meta charset="UTF-8">
         <title>OSX El Capitan 10.11.3</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" href="css/jquery-ui.min.css">
         <link rel="stylesheet" href="css/animate.css">
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/OSXElCapitalStyle.css">
@@ -116,6 +118,81 @@
             </div>
         </div>
 
+        <!-- Finder -->
+        <div id="finderM">
+            <div id="menuBar">
+                <div id="cmzBtBar">
+                    <div class="cmzButtons" id="closeF"></div>
+                    <div class="cmzButtons" id="minF"></div>
+                    <div class="cmzButtons" id="maxF"></div>
+                </div>
+                <div id="buttonsBar">
+                    <div class="buttonER" id="newFile" align="center">
+                        <img src="img/newDocument.png" alt="newDoc" height="12" width="12" />
+                    </div>
+                    <div class="buttonER" id="deleteFile" align="center">
+                        <img src="img/deleteDocument.png" alt="delDoc" height="12" width="12" />
+                    </div>
+                    <div class="buttonER" id="openFile" align="center">
+                        <img src="img/documentEdit.png" alt="editDoc" height="12" width="12" />
+                    </div>
+                </div>
+            </div>
+            <div id="backFav"></div>
+            <div id="favorites">
+              <p class="cbz">Favorites</p>
+                <ul class="list">
+                    <li><img src="" alt="" />All My Files</li>
+                    <li><img src="" alt="" />Desktop</li>
+                    <li><img src="" alt="" />Documents</li>
+                </ul>
+            </div>
+            <div id="files">
+                <ul class="list2">
+                  <?php
+                    if (is_dir($user)) {
+                      if ($dh = opendir($user)){
+                        $num = 0;
+                        while (($file = readdir($dh)) != false){
+                          if (is_dir($user."/".$file)){
+                            echo "<li id='file".$num."'><img src='img/folderfile.png' alt='folder' height='15' width='15'>".$file."</li>";
+                            $num++;
+                          }else{
+                            echo "<li id='file".$num."' onclick='filename(id)'><img src='img/textfile.png' alt='file' height='15' width='15'>".$file."</li>";
+                            $num++;
+                          }
+                        }
+                      }
+                    }else {
+                      mkdir($user);
+                    }
+                  ?>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Text Editor -->
+        <div id="pages">
+            <div id="pagesMenuBar">
+              <div id="cmzBtBarPages">
+                  <div class="cmzButtons" id="closeP"></div>
+                  <div class="cmzButtons" id="minP"></div>
+                  <div class="cmzButtons" id="maxP"></div>
+              </div>
+              <div id="buttonsBarPages">
+                  <div class="buttonPages" id="newFileP" align="center">
+                      <img src="img/newDocument.png" alt="newDoc" height="14" width="14" />
+                  </div>
+                  <div class="buttonPages" id="ediFile" align="center">
+                      <img src="img/documentEdit.png" alt="editDoc" height="14" width="14" />
+                  </div>
+              </div>
+            </div>
+            <textarea id="itextArea" name="textArea" rows="22" cols="100"></textarea>
+            <div id="toolsText">
+
+            </div>
+        </div>
         <!-- About -->
 
         <ul id="menuDrop">
@@ -135,6 +212,18 @@
         </div>
 
     </body>
+
+    <!-- Aux form -->
+    <div id="dialog-form" title="File name">
+        <form>
+          <fieldset>
+              <label>File name</label>
+              <input id="fileNameInput" type="text" name="name" class="text ui-widget-content ui-corner-all" required>
+              <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+          </fieldset>
+        </form>
+    </div>
+
 </html>
 
 <?php

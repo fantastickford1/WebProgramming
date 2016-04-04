@@ -572,6 +572,250 @@ a#equal{
   background-color: #116cd6;
 }
 
-#formulario{
-  
+/*Finder Style*/
+#finderM{
+  display: none;
+  position: absolute;
+  top: 12vh;
+  left: 30vw;
 }
+
+#menuBar{
+  background-color: #E0DEE1;
+  width: 50vw;
+  height: 7vh;
+  border-top-right-radius: 0.4vw;
+  border-top-left-radius: 0.4vw;
+}
+
+#cmzBtBar{
+  align-items: center;
+  position: relative;
+  top: 0.7vh;
+}
+
+.cmzButtons{
+  width: 0.9vw;
+  height: 0.9vw;
+  border-radius: 100%;
+  float: left;
+  margin-left: 0.5vw;
+}
+
+#closeF{
+  background-color: #EA5A59;
+}
+
+#minF{
+  background-color: #F7BC30;
+}
+
+#maxF{
+  background-color: #64CC43;
+}
+
+#buttonsBar{
+  align-items: center;
+  position: relative;
+  float: left;
+  top: 1.6vw;
+  left: 18vw
+}
+
+.buttonER{
+  background-color: #F6F6F6;
+  width: 2.5vw;
+  height: 3.5vh;
+  border-color: #C8C8C8;
+  border-width: 0.05vw;
+  border-style: solid;
+  float: left;
+}
+
+.buttonER > img{
+  position: relative;
+  bottom: 0.1vw;
+}
+
+.buttonER:hover{
+  transition: background-color 0.1s ease;
+  background-color: #686868;
+  border-color: #606060;
+  cursor: pointer;
+}
+
+#newFile{
+  border-top-left-radius: 0.3vw;
+  border-bottom-left-radius: 0.3vw;
+}
+
+#openFile{
+  border-top-right-radius: 0.3vw;
+  border-bottom-right-radius: 0.3vw;
+}
+
+#backFav{
+  position: absolute;
+  top: 7vh;
+  left: 0vw;
+  z-index: 1;
+  background: rgba(255,255,255,0.4);
+  filter: url('#blur');
+  filter: blur(5px);
+  width: 17vw;
+  height: 58vh;
+}
+
+#favorites{
+  float: left;
+  position: relative;
+  top: 0vh;
+  left: 0vw;
+  z-index: 3;
+  background-color: rgba(255,255,255,0.7);
+  width: 17vw;
+  height: 58vh;
+  border-bottom-left-radius: 0.4vw;
+}
+
+.cbz{
+  font-size: 0.9em;
+  font-weight: bold;
+  color: rgba(47,61,74,0.7);
+  padding-left: 1vw;
+}
+
+.list{
+  color: rgba(47,61,74,0.7);
+  list-style-type:none;
+  padding-left: 0vw;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.list > li{
+  padding-left: 3vw;
+}
+
+.list > li:hover{
+  transition: background-color 0.1s ease;
+  background-color: rgba(32,44,58,0.3);
+  cursor: pointer;
+}
+
+#files{
+  float: left;
+  background-color: #FFFFFF;
+  height: 58vh;
+  width: 33vw;
+  border-bottom-right-radius: 0.4vw;
+  overflow-y: auto;
+}
+
+.list2{
+  color: rgb(47,61,74);
+  list-style-type:none;
+  padding-left: 0vw;
+}
+
+.list2 > li{
+  padding-left: 2vw;
+}
+
+.list2 > li:active{
+  background-color: #006BD8;
+  color: white;
+}
+
+.color1{
+  background-color: #F5F5F5;
+}
+
+/*>>>>>>>>>>>>>>><<<<<<<<<<<<<*/
+
+/*Pages*/
+
+#pages {
+  z-index: 5;
+  display: none;
+  position: absolute;
+  top: 12vh;
+  left: 20vw;
+}
+
+#pagesMenuBar {
+  background-color: #E0DEE1;
+  width: 65vw;
+  height: 7vh;
+  border-top-right-radius: 0.4vw;
+  border-top-left-radius: 0.4vw;
+}
+
+#cmzBtBarPages{
+  align-items: center;
+  position: relative;
+  top: 0.7vh;
+}
+
+#closeP{
+  background-color: #EA5A59;
+}
+
+#minP{
+  background-color: #F7BC30;
+}
+
+#maxP{
+  background-color: #64CC43;
+}
+
+#buttonsBarPages{
+  align-items: center;
+  position: relative;
+  float: left;
+  top: 1.3vw;
+  left: 25vw
+}
+
+.buttonPages{
+  background-color: #F6F6F6;
+  width: 2.7vw;
+  height: 3.7vh;
+  border-color: #C8C8C8;
+  border-width: 0.05vw;
+  border-style: solid;
+  float: left;
+}
+
+.buttonPages:hover{
+  transition: background-color 0.1s ease;
+  background-color: #686868;
+  border-color: #606060;
+  cursor: pointer;
+}
+
+#newFileP{
+  border-top-left-radius: 0.3vw;
+  border-bottom-left-radius: 0.3vw;
+}
+
+#ediFile{
+  border-top-right-radius: 0.3vw;
+  border-bottom-right-radius: 0.3vw;
+}
+
+#itextArea{
+  padding: 3vw;
+  resize: none;
+  outline: none;
+  float: left;
+}
+
+#toolsText{
+  float: left;
+  background-color: #F7F7F7;
+  width: 11.9vw;
+  height: 81.6vh;
+}
+
+/*>>>>>>>>>>>>>><<<<<<<<<<<<<<*/
