@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" src="javascript/angular.min.js"></script>
+  <script type="text/javascript" src="javascript/controller.js"></script>
+  <title>Pay</title>
+</head>
+<body>
+  <div ng-app="validacionApp"style="height:100%;width:100%" ng-controller="controladorValidacion" novalidate>
+    <div class="col-md-4">
+      <form name="formV" ng-submit="submitForm(formV.$valid)"  action="index.html" method="post">
+          <p>Name</p>
+          <input type="text" name="name" class="form-control" ng-class="formV.name.$invalid&& !formV.name.$pristine?'error':''" ng-model="name" required>
+          <p ng-show="formV.name.$invalid && !formV.name.$pristine" class="help-block">Name required</p>
+
+          <p>Address</p>
+          <input type="text" name="direccion" class="form-control" ng-class="formV.direccion.$invalid&& !formV.direccion.$pristine?'error':''" ng-model="direccion" required>
+          <p ng-show="formV.direccion.$invalid && !formV.direccion.$pristine" class="help-block">Addres required</p>
+
+          <p>Phone</p>
+          <input type="text" name="telefono" class="form-control" ng-model="telefono" ng-class="formV.telefono.$invalid?'error':''" ng-maxlength="10">
+          <p ng-show="formV.telefono.$error.maxlength" class="help-block">The number has to be 10 digits long</p>
+
+          <p>Email</p>
+          <input type="email" name="email" class="form-control" ng-model="email" ng-class="formV.email.$invalid?'error':''">
+          <p ng-show="formV.email.$invalid && !formV.email.$pristine" class="help-block">Input a valid e-mail</p>
+          <br>
+        <input type="submit" class="boton-submit" ng-disabled="formV.$invalid" value="Send">
+
+      </form>
+    </div>
+    <div class="beach  col-md-8">
+      <h1 class="white center">
+        {{"Thanks for the ship " +name}}
+      </h1>
+      <div class="white" style="position:absolute; bottom: 10px; left:10px;">
+        <p >{{nombre.toUpperCase()}}</p>
+        <p >{{matricula.toUpperCase()}}</p>
+        <p >{{materia.toUpperCase()}}</p>
+        <p >{{universidad.toUpperCase()}}</p>
+        <p >{{profesor.toUpperCase()}}</p>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
