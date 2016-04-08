@@ -452,4 +452,12 @@ $(function () {
     $('#itextArea').css("font-size","24px");
   });
 
+  $("#undo").on("click", function () {
+    document.execCommand('undo',false,null);
+  });
+
+  $("#redo").on("click", function () {
+    document.execCommand('redo',false,null);
+  });
+
 });
