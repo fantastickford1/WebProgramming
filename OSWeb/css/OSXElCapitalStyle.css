@@ -739,14 +739,14 @@ a#equal{
   z-index: 5;
   display: none;
   position: absolute;
-  top: 12vh;
+  top: 7vh;
   left: 20vw;
 }
 
 #pagesMenuBar {
   background-color: #E0DEE1;
   width: 65vw;
-  height: 7vh;
+  height: 8.5vh;
   border-top-right-radius: 0.4vw;
   border-top-left-radius: 0.4vw;
 }
@@ -769,12 +769,18 @@ a#equal{
   background-color: #64CC43;
 }
 
+#fileName{
+  position: relative;
+  left: 25vw;
+  margin: 0px;
+}
+
 #buttonsBarPages{
   align-items: center;
   position: relative;
   float: left;
-  top: 1.3vw;
-  left: 25vw
+  top: 0.5vw;
+  left: 27.9vw;
 }
 
 .buttonPages{
@@ -806,16 +812,60 @@ a#equal{
 
 #itextArea{
   padding: 3vw;
-  resize: none;
-  outline: none;
   float: left;
+  width: 53.1vw;
+  height: 75vh;
+  background-color: white;
 }
 
 #toolsText{
   float: left;
   background-color: #F7F7F7;
   width: 11.9vw;
-  height: 81.6vh;
+  height: 75vh;
 }
+
+#group1{
+  position: relative;
+  top: 3vw;
+  left: 2.5vw;
+}
+
+#group2{
+  position: relative;
+  top: 5vw;
+  left: -2.7vw;
+}
+
+#group3{
+  position: relative;
+  top: 6vw;
+  left: 4.2vw;
+}
+
+.ThePage{
+  border: 1px solid #E4E4E4;
+  float: left;
+  background-color: #FFFFFF;
+}
+
+#undo{
+  border-top-left-radius: 0.3vw;
+  border-bottom-left-radius: 0.3vw;
+}
+
+#redo{
+  border-top-right-radius: 0.3vw;
+  border-bottom-right-radius: 0.3vw;
+}
+
+#font{
+  border-radius: 0.3vw;
+}
+
+#size{
+  border-radius: 0.3vw;
+}
+
 
 /*>>>>>>>>>>>>>><<<<<<<<<<<<<<*/

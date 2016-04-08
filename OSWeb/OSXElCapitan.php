@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="css/jquery-ui.min.css">
         <link rel="stylesheet" href="css/animate.css">
         <link rel="stylesheet" href="css/bootstrap.css">
+        <link href='https://fonts.googleapis.com/css?family=Ubuntu|Chewy|Quattrocento+Sans|Kaushan+Script|Comfortaa|Lobster+Two|Raleway|Montserrat|Titillium+Web|Josefin+Sans|Pacifico|Orbitron|Josefin+Slab|Satisfy|Economica|Courgette' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/OSXElCapitalStyle.css">
         <script src="js/jquery-1.12.0.min.js"></script>
         <script src="js/jquery-ui.min.js"></script>
@@ -179,6 +180,7 @@
                   <div class="cmzButtons" id="minP"></div>
                   <div class="cmzButtons" id="maxP"></div>
               </div>
+              <p id="fileName">Pages</p>
               <div id="buttonsBarPages">
                   <div class="buttonPages" id="newFileP" align="center">
                       <img src="img/newDocument.png" alt="newDoc" height="14" width="14" />
@@ -188,9 +190,51 @@
                   </div>
               </div>
             </div>
-            <textarea id="itextArea" name="textArea" rows="22" cols="100"></textarea>
+            <div id="itextArea" contenteditable="true" style="font-family: Arial; font-size: 15px;"></div>
             <div id="toolsText">
-
+              <div id="group1">
+                <button id="undo" class="ThePage" type="button" name="undo">Undo</button>
+                <button id="redo" class="ThePage" type="button" name="redo">Redo</button>
+              </div>
+              <div id="group2">
+                <button id="font" class="ThePage btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Font<span class="caret"></span></button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                  <li id = "raleway-font" style = "font-family: Raleway;"><a href="#">Raleway</a></li>
+                  <li id = "montserrat-font" style = "font-family: Montserrat"><a href="#">Montserrat</a></li>
+                  <li id = "titillium-font" style = "font-family: Titillium Web"><a href="#">Titillium Web</a></li>
+                  <li id = "pacifico-font" style = "font-family: Pacifico"><a href="#">Pacifico</a></li>
+                  <li id = "josefin-slab-font" style = "font-family: Josefin Slab"><a href="#">Josefin Slab</a></li>
+                  <li id = "orbitron-font" style = "font-family: Orbitron"><a href="#">Orbitron</a></li>
+                  <li id = "comfortaa-font" style = "font-family: Comfortaa;"><a href="#">Comfortaa</a></li>
+                  <li id = "courgette-font" style = "font-family: Courgette;"><a href="#">Courgette</a></li>
+                  <li id = "ubuntu-font" style = "font-family: Ubuntu;"><a href="#">Ubuntu</a></li>
+                  <li id = "chewy-font" style = "font-family: Chewy;"><a href="#">Chewy</a></li>
+                  <li id = "lobster-two-font" style = "font-family: Lobster Two;"><a href="#">Lobster Two</a></li>
+                  <li id = "kaushan-script-font" style = "font-family: Kaushan Script;"><a href="#">Kaushan Script</a></li>
+                  <li id = "economica-font" style = "font-family: Economica;"><a href="#">Economica</a></li>
+                  <li id = "satisfy-font" style = "font-family: Satisfy;"><a href="#">Satisfy</a></li>
+                </ul>
+              </div>
+              <div id="group3">
+                <!-- Single button -->
+                <div class="btn-group">
+                  <button id="size" type="button" class="ThePage btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Size <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li id="size2"><a href="#">2</a></li>
+                    <li id="size4"><a href="#">4</a></li>
+                    <li id="size6"><a href="#">6</a></li>
+                    <li id="size9"><a href="#">9</a></li>
+                    <li id="size12"><a href="#">12</a></li>
+                    <li id="size14"><a href="#">14</a></li>
+                    <li id="size16"><a href="#">16</a></li>
+                    <li id="size19"><a href="#">19</a></li>
+                    <li id="size22"><a href="#">22</a></li>
+                    <li id="size24"><a href="#">24</a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
         </div>
         <!-- About -->

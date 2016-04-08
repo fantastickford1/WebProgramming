@@ -6,10 +6,15 @@ $user = $_SESSION['username'];
 $action = $_POST['action'];
 $data = $_POST['data'];
 $dataToWrite = $_POST['toWrite'];
+$font = $_POST['font'];
+$size = $_POST['size'];
 $path = $user."/".$data;
 switch ($action) {
   case "create":
-    fopen($path, "w");
+    $myfile = fopen($path, "w");
+    $someText = "NewFile"."$%#¡".$font.",".$size;
+    fwrite($myfile, $someText);
+    fclose($myfile);
     break;
 
   case "delete":
@@ -24,6 +29,7 @@ switch ($action) {
 
   case "editPages":
     $myfile = fopen($path, "w");
+    $dataToWrite = $dataToWrite."$%#¡".$font.",".$size;
     fwrite($myfile, $dataToWrite);
     fclose($myfile);
     break;

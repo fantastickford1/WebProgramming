@@ -40,7 +40,6 @@ $(function(){
     $("#pages").draggable();
 
     $("#closeP").on("click", function() {
-        $("#itextArea").val("");
         $("#pages").css("display","none");
     });
 });
@@ -261,7 +260,22 @@ $(function () {
           action: "edit", data: fileN, toWrite: "none"
         },
         function (respont) {
-          $("#itextArea").val(respont);
+          respont = respont.split("$%#¡");
+          allText = respont[0];
+          styles = respont[1];
+          styles = styles.split(",");
+          font = styles[0];
+          size = styles[1];
+          font = font.split(":");
+          size = size.split(":");
+          fontName = font[0];
+          fontProp = font[1];
+          sizeName = size[0];
+          sizeProp = size[1];
+          $("#fileName").text(fileN);
+          $('#itextArea').css(fontName,fontProp);
+          $('#itextArea').css(sizeName,sizeProp);
+          $("#itextArea").html(allText);
           $("#pages").css("display","inline");
         }
       );
@@ -271,11 +285,18 @@ $(function () {
   function createFile() {
     FileNameInput = $("#fileNameInput").val();
     FileNameInput = FileNameInput + ".txt";
+    var styleProp = $('#itextArea').css(["font-family","font-size"]);
+    var styles = [];
+    var cont = 0;
+    $.each( styleProp, function( prop, value ) {
+      styles[cont] = prop + ":" + value;
+      cont++;
+    });
     if (FileNameInput != "" && FileNameInput != " ") {
       $.post(
         "filesManager.php",
         {
-          action: "create", data: FileNameInput, toWrite: "none"
+          action: "create", data: FileNameInput, toWrite: "none",font: styles[0], size: styles[1]
         },
         function () {
           $(".list2").load("AllFiles.php");
@@ -317,13 +338,118 @@ $(function () {
   });
 
   $("#ediFile").on("click", function () {
-    var text = $("#itextArea").val();
+    var text = $("#itextArea").html();
+    var styleProp = $('#itextArea').css(["font-family","font-size"]);
+    var styles = [];
+    var cont = 0;
+    $.each( styleProp, function( prop, value ) {
+      styles[cont] = prop + ":" + value;
+      cont++;
+    });
     $.post(
       "filesManager.php",
       {
-        action: "editPages", data: fileN, toWrite: text
+        action: "editPages", data: fileN, toWrite: text, font: styles[0], size: styles[1]
       }
     );
-  })
+  });
+
+  ///////
+
+  $("#raleway-font").click(function(){
+    $('#itextArea').css("font-family","Raleway");
+  });
+
+  $("#montserrat-font").click(function(){
+    $('#itextArea').css("font-family","Montserrat");
+  });
+
+  $("#titillium-font").click(function(){
+    $('#itextArea').css("font-family","Titillium Web");
+  });
+
+  $("#pacifico-font").click(function(){
+    $('#itextArea').css("font-family","Pacifico");
+  });
+
+  $("#josefin-slab-font").click(function(){
+    $('#itextArea').css("font-family","Josefin Slab");
+  });
+
+  $("#orbitron-font").click(function(){
+    $('#itextArea').css("font-family","Orbitron");
+  });
+
+  $("#comfortaa-font").click(function(){
+    $('#itextArea').css("font-family","Comfortaa");
+  });
+
+  $("#courgette-font").click(function(){
+    $('#itextArea').css("font-family","Courgette");
+  });
+
+  $("#ubuntu-font").click(function(){
+    $('#itextArea').css("font-family","Ubuntu");
+  });
+
+  $("#chewy-font").click(function(){
+    $('#itextArea').css("font-family","Chewy");
+  });
+
+  $("#kaushan-script-font").click(function(){
+    $('#itextArea').css("font-family","Kaushan Script");
+  });
+
+  $("#lobster-two-font").click(function(){
+    $('#itextArea').css("font-family","Lobster Two");
+  });
+
+  $("#economia-font").click(function(){
+    $('#itextArea').css("font-family","Economica");
+  });
+
+  $("#satisfy-font").click(function(){
+    $('#itextArea').css("font-family","Satisfy");
+  });
+
+  $("#size2").click(function () {
+    $('#itextArea').css("font-size","2px");
+  });
+
+  $("#size4").click(function () {
+    $('#itextArea').css("font-size","4px");
+  });
+
+  $("#size6").click(function () {
+    $('#itextArea').css("font-size","6px");
+  });
+
+  $("#size9").click(function () {
+    $('#itextArea').css("font-size","9px");
+  });
+
+  $("#size12").click(function () {
+    $('#itextArea').css("font-size","12px");
+  });
+
+  $("#size14").click(function () {
+    $('#itextArea').css("font-size","14px");
+  });
+
+  $("#size16").click(function () {
+    $('#itextArea').css("font-size","16px");
+  });
+
+  $("#size19").click(function () {
+    $('#itextArea').css("font-size","19px");
+  });
+
+  $("#size22").click(function () {
+    $('#itextArea').css("font-size","22px");
+  });
+
+  $("#size24").click(function () {
+    $('#itextArea').css("font-size","24px");
+  });
 
 });
